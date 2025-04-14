@@ -4,3 +4,72 @@
     {{ form.as_p }}
     <button type="submit">Login</button>
 </form>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f2f4f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 60px;
+        color: #2c3e50;
+    }
+
+    form {
+        background-color: #fff;
+        max-width: 400px;
+        margin: 30px auto;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    form p {
+        margin-bottom: 20px;
+    }
+
+    form label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+        transition: border-color 0.2s ease-in-out;
+    }
+
+    form input:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #3498db;
+        border: none;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #2c80b4;
+    }
+</style>

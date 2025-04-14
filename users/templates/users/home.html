@@ -9,14 +9,13 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Our E-Commerce Platform</h1>
+        <h1>Welcome to Our E-Commerce Platform, {{user.username}}</h1>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="{% url 'view_cart' %}">Cart</a></li>
                 <li><a href="{% url 'user_products' %}">Your products</a></li>
+                <li><a href="{% url 'update_profile' %}">Update Profile</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +29,7 @@
                 <h3>{{ product.name }}</h3>
                 <p>{{ product.description|truncatewords:20 }}</p>
                 <p>Price: ${{ product.price }}</p>
-                <a href="#">Add to Cart</a>
+                <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
             </div>
             {% empty %}
             <p>No products available at the moment.</p>
@@ -39,6 +38,7 @@
     </main>
 
     <footer>
+        <a href="{% url 'logout' %}">Logout</a>
         <p>&copy; 2025 E-commerce Platform</p>
     </footer>
 </body>

@@ -12,6 +12,15 @@ urlpatterns = [
     path('sell/',views.sell_product,name='sell_product'),
     path('my-products/',views.user_products,name='user_products'),
     path('delete-product/<int:product_id>',views.delete_product,name='delete_product'),
+
+    path('logout/',views.user_logout,name='logout'),
+    path('cart/',views.view_cart,name='view_cart'),
+    path('cart/remove/<int:item_id>/', views.remove_from_cart, name='remove_from_cart'),
+    path('cart/add/<int:product_id>/',views.add_to_cart,name='add_to_cart'),
+    # path('cart/checkout/<int:seller_id>/',views.checkout_seller,name='checkout_seller'),
+    path('payment/execute/',views.execute_payment,name='execute_payment'),
+    path('checkout/item/<int:item_id>/',views.checkout_item,name='checkout_item'),
+    path('profile/update/',views.update_profile,name='update_profile'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -132,3 +132,7 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# settings.py
+PAYPAL_CLIENT_ID = 'your-client-id'
+PAYPAL_CLIENT_SECRET = 'your-client-secret'
